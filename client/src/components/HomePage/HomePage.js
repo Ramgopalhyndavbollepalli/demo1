@@ -71,7 +71,7 @@ export default function HomePage() {
         padding: '40px',
         borderRadius: '10px',
         boxShadow: 3,
-        backgroundColor: 'white',
+        backgroundColor: '#ff9900',
         textAlign: 'center',
         mt: 3,
         p: 3,

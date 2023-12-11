@@ -59,7 +59,7 @@ export default function AppBarComponent() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "#ff9900",
               textDecoration: "none",
             }}
           >
@@ -73,7 +73,7 @@ export default function AppBarComponent() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#ff9900"
             >
               <MenuIcon />
             </IconButton>
@@ -116,11 +116,11 @@ export default function AppBarComponent() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "#ff9900",
               textDecoration: "none",
             }}
           >
-            PersonalBudget
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (

@@ -206,7 +206,7 @@ const ProfileComponent = () => {
                                                 borderRadius: 2,
                                                 backgroundColor: 'white',
                                                 margin: 'auto',
-                                                width: '50%', // Adjust the width as needed
+                                                width: '100%', // Adjust the width as needed
                                             }}
                                         >
                                             <Typography variant="h4" align='center' gutterBottom>

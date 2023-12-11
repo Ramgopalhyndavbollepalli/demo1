@@ -76,7 +76,7 @@ export default function LoginComponent() {
             marginTop: 8,
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "left",
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
@@ -86,12 +86,12 @@ export default function LoginComponent() {
             Sign in
           </Typography>
           <Collapse in={errorOpen}>
-            <Stack sx={{ width: "100%" }} spacing={2}>
+            <Stack sx={{ width: "1%" }} spacing={2}>
               <Alert severity="error" id="errormessage">{errorMessage}</Alert>
             </Stack>
           </Collapse>
           <Collapse in={successOpen}>
-            <Stack sx={{ width: "100%" }} spacing={2}>
+            <Stack sx={{ width: "1%" }} spacing={2}>
               <Alert severity="success">{successMessage}</Alert>
             </Stack>
           </Collapse>
