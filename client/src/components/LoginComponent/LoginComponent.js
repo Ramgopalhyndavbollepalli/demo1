@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
 import Collapse from "@mui/material/Collapse";
-import AppBarComponent from "../AppBarComponent/AppBarComponent";
+import MenuComponent from "../MenuComponent/MenuComponent";
 
 
 
@@ -41,7 +41,7 @@ export default function LoginComponent() {
     var response;
     try {
       response = await axios.post(
-        "http://localhost:3001/app/login",
+        "http://3.80.37.57:3001/app/login",
         requestData
       );
       switch (response.status) {
@@ -67,7 +67,7 @@ export default function LoginComponent() {
     
     <ThemeProvider theme={defaultTheme}>
       <div >
-      <AppBarComponent/>
+      <MenuComponent/>
       <Container component="main" maxWidth="xs">
       
         <CssBaseline />

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AppBarComponent from "../AppBarComponent/AppBarComponent";
+import MenuComponent from "../MenuComponent/MenuComponent";
 import { Button } from "@mui/material";
 function UnauthorizedComponent() {
     return (
         <div>
-            <AppBarComponent />
+            <MenuComponent />
             <header className="hero">
                 <h1>UnAuthorized</h1>
                 <h2>Please login/signup to access the application</h2>

@@ -3,18 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginComponent from './components/LoginComponent/LoginComponent';
 import SignUp from './components/SignupComponent/SignupComponent';
 import HomePage from './components/HomePage/HomePage';
-import LoggedOutComponent from './components/LoggedOutComponent/LoggedOutComponent';
-import ProfileComponent from './components/ProfileComponent/ProfileComponent';
+import LogOutComponent from './components/LogOutComponent/LogOutComponent';
+import ProfileComponent from './components/UserComponent/UserComponent';
 import MyBudgetsComponent from './components/MyBudgetsComponent/MyBudgetsComponent';
-import DashboardComponent from './components/DashboardComponent/DashboardComponent';
-import MonthlyBudgetsComponent from './components/MonthlyBudgetsComponent/MonthlyBudgetsComponent';
+import DashboardPageComponent from './components/DashboardPageComponent/DashboardPageComponent';
 import MonthlyBudgets from './components/MonthlyBudgets/MonthlyBudgets';
 import UnauthorizedComponent from './components/UnauthorizedComponent/UnauthorizedComponent';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
-import MyConfigureBudgetsComponent from './components/ConfigureBudgets/ConfigureBudgets';
-import ExpensesComponent from './components/ExpensesComponent/ExpensesComponent';
 
 function App() {
   const [tokenExpiration, setTokenExpiration] = useState(null);
@@ -65,7 +62,7 @@ function App() {
     // Implement any necessary actions to refresh the token or extend the session
     try {
       const response = await axios.post(
-        "http://localhost:3001/app/refreshToken",
+        "http://3.80.37.57:3001/app/refreshToken",
         null,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -127,13 +124,11 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginComponent />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path='/logout' element={<LoggedOutComponent />} />
+          <Route path='/logout' element={<LogOutComponent />} />
           <Route path='/mybudgets' element={<MyBudgetsComponent />} />
           <Route path='/profile' element={<ProfileComponent />} />
-          <Route path='/dashboard' element={<DashboardComponent />} />
+          <Route path='/dashboard' element={<DashboardPageComponent />} />
           <Route path='/monthlybudgets' element={<MonthlyBudgets />} />
-          <Route path='/configure' element={<MyConfigureBudgetsComponent />} />
-          <Route path='/expenses' element={<ExpensesComponent />} />
 
       </Routes>)
         :

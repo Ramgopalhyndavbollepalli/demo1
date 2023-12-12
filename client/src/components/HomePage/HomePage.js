@@ -1,6 +1,6 @@
 import * as React from "react";
 import './HomePage.css'
-import AppBarComponent from "../AppBarComponent/AppBarComponent";
+import MenuComponent from "../MenuComponent/MenuComponent";
 import Hero from "../Hero/Hero";
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -40,7 +40,7 @@ export default function HomePage() {
     },
     {
       title: 'Functionality 2',
-      description: 'The  budgets can be added, edited, or deleted by users.',
+      // description: 'The  budgets can be added, edited, or deleted by users.',
       function: 'Monthly Budgets',
       link: {
         authenticated: '/monthlybudgets',
@@ -60,7 +60,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <AppBarComponent />
+      <MenuComponent />
       <Hero />
 
       <Box
@@ -77,10 +77,7 @@ export default function HomePage() {
         p: 3,
       }}
     >
-      <h2>
-      Users can use this Personal Budget application to plan their budgets, The user of this application can establish monthly budgets for specific items. Additionally, users can also see their budgets.
-
-</h2>
+  
       <Typography variant="h5" align='center' gutterBottom>
           Components
         </Typography>

@@ -67,11 +67,13 @@ export default function SignUp() {
     };
     var response;
     try {
-      response = await axios.post("http://localhost:3001/app/signup", userData);
+      response = await axios.post("http://3.80.37.57/app/signup", userData);
       switch (response.status) {
         case 200:
           setSuccessOpen(true);
           setSuccessMessage(response.data.message);
+          localStorage.setItem("token", response.data.token);
+          window.location.href='/';
           break;
         default:
           setErrorOpen(true);
@@ -79,7 +81,7 @@ export default function SignUp() {
           break;
       }
       // console.log(response.data);
-      localStorage.setItem("token", response.data.token);
+      
     } catch (error) {
       setErrorMessage("Server error. Please try again Later");
     }
